@@ -77,7 +77,7 @@
                             <label for="pc_lt_maintain">Desktop/Laptop Maintenance</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="service[]" name="soft_install" id="soft_install" value="soft_install">
+                            <input type="checkbox" name="service[]" id="soft_install" value="soft_install">
                             <label for="soft_install">Software Installation</label>
                         </div>
                         <div>
@@ -105,9 +105,9 @@
                         <label class="form-label" for="myfile">Please select a picture or screenshot that serves as a reference of your request:</label>
                         <input type="file" id="file" onchange="return fileValidation()" />
                             <!-- Image preview -->
-                        <span class="img-holder">
-                            <div id="imagePreview"></div>
-                        </span>
+                        <!-- <span class="img-holder">
+                            <div class="imagePreview" id="imagePreview"></div>
+                        </span> -->
                     </div>
                     <div class="submit">
                         <button class="form-button" type="reset">Clear</button>
@@ -137,25 +137,27 @@
             }
     
             function fileValidation() {
-                    var filePath = fileInput.value;
-                    // Allowing file type
-                    var allowedExtensions =
-                            /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-                     
-                    if (!allowedExtensions.exec(filePath)) {
-                        alert('Invalid file type');
-                        fileInput.value = '';
-                        return false;
-                    }
-                    else
-                    {
-                        // Image preview
-                        if (fileInput.files && fileInput.files[0]) {
-                            var reader = new FileReader();
-                            reader.readAsDataURL(fileInput.files[0]);
-                        }
-                    }
-                }
+                var filePath = fileInput.value;
+         
+                // Allowing file type
+                var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+          
+                if (!allowedExtensions.exec(filePath)) {
+                    alert('Invalid file type');
+                    fileInput.value = '';
+                    return false;
+                }else{
+                    // Image preview
+                    if (fileInput.files && fileInput.files[0]) {
+                        var reader = new FileReader();
+                //         reader.onload = function(e) {
+                //              document.getElementById('imagePreview').innerHTML = '<img src="' + e.target.result + '"/>';
+                //  }; 
+                 reader.readAsDataURL(fileInput.files[0]);
+             }
+         }
+     }
+ </script>
         </script>
     </body>
 </html>
