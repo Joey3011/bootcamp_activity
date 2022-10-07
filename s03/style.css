@@ -1,0 +1,63 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    color: brown;
+}
+/* ID Selector */
+
+#title-1{
+    color: #235879;
+}
+
+/* Class Selector */
+
+.title-2{
+    color: violet;
+    text-align: center;
+}
+
+/* Attribute Selector */
+[type="text"]{
+    background-color: aquamarine;
+}
+
+/* Combinator Selector */
+
+/* Dexcendant selector */
+/* Select/target all elements that matches the specified elements */
+
+/* Synta; First element child element {
+    property: value;  */
+
+    div p{
+        background-color: red;
+    }
+
+    /* Child selector */
+    div > p{
+        background-color: chocolate;
+    }
+
+    /* Adjacent sibling selector (+)
+   - selects or target an element that is direct after the first selector */
+
+   p + p{
+    background-color: maroon;
+   }
+
+   div + p{
+    background-color: #333412;
+   }
+
+   /* General Sibling selector */
+
+   p ~ p {
+    background-color: blue;
+   }
+
+  @media screen {
+    
+  }
+    

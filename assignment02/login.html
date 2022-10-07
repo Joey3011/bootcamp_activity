@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="form-menu">
+            <div class="form-login">
+                <form action="form.html">
+                    <div>
+                        <h1>
+                            Login
+                        </h1>
+                    </div>
+                    <div>
+                        <label for="fname">Username or Email:</label>
+                        <input class="form-input" type="text" id="username" placeholder="Email or Username" required>
+                    </div>
+                    <div>
+                        <label for="lname">Password:</label>
+                        <input class="form-input" type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="submit">
+                        <button class="form-button" type="reset">Clear</button>
+                        <button onclick="validateForm()" class="form-button" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function validateForm() {
+            let user = document.getElementById('username').value;
+            let pwd = document.getElementById('password').value;
+            if (user !== "" && pwd !== "") {
+                alert("Thank you for logging in...");
+                return true;
+            }
+            return false;
+            
+        }
+    </script>
+</html>

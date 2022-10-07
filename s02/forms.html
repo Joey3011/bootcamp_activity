@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Example</title>
+        <style>
+            .form-menu{
+                margin: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0.8rem 0;
+            }
+            .form-elements{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                width: 350px;
+                padding: 0 0.8rem;
+                }
+            h1{
+                    text-align: center;
+                }
+            .form-input,
+            textarea {
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                display: inline-block;
+                padding: 0.5rem 0.1rem;
+                width: 100%;
+                font-family: inherit;
+                font-size: 1rem;
+            }
+            .form-input:focus,
+            textarea:focus{
+                outline:0;
+                box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+                }
+            textarea::placeholder{
+                color: #c2c2c2;
+            }
+            .form-label{
+                width:100%;
+                font-size: small;
+                }
+                .form-button{
+                    background:royalblue;
+                    color: #fff;
+                    border:1px solid white;
+                    border-radius: 0.25rem;
+                    font-size: 0.8em;
+                    font-weight: 400;
+                    text-align: center;
+                    padding:.5em .75em;
+                    cursor: pointer;
+                    user-select: none;
+                    font-style: normal;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="form-menu">
+            <div class="form-elements">
+                <form action="" method="post">
+                    <div>
+                        <h1>
+                            Form Example
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            <label class="form-label" for="fname">First Name:</label>
+                            <input class="form-input" type="text" id="fname" placeholder="First name">
+                        </p>
+                    </div>
+        
+                    <div>
+                        <p>
+                            <label class="form-label" for="lname">Last Name:</label>
+                            <input class="form-input" type="text" id="lname" placeholder="Last name">
+                        </p>
+                    </div>
+        
+                    <div>
+                        <p>
+                            <button class="form-button" type="submit">Submit</button>
+                            <button class="form-button" type="reset">Clear</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-elements">
+                <form action="">
+                    <div>
+                        <h1>
+                            Survey Form
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            <label class="form-label" for="fname">First Name:</label>
+                            <input class="form-input" type="text" id="fname" placeholder="First name">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label class="form-label" for="lname">Last Name:</label>
+                            <input class="form-input" type="text" id="lname" placeholder="Last name">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label class="form-label" for="email">Email:</label>
+                            <input class="form-input" type="email" id="email" placeholder="email">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="work_loc">Work location:</label> 
+                        </p>
+                        <p>
+                            <input type="radio" id="onsite" name="work_site" value="Onsite">
+                            <label class="form-label" for="onsite">Onsite</label>
+                            <input type="radio" id="css" name="work_site" value="WFH">
+                            <label class="form-label" for="css">WFH</label>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="batch">Batch Number:</label>
+                            <select name="bnum" id="bnum">
+                                <option value="select">Select</option>
+                                <option value="WD23">WD23</option>
+                                <option value="WD24">WD24</option>
+                                <option value="WD25">WD25</option>
+                                <option value="WD26">WD26</option>
+                                <option value="WD27">WD27</option>
+                                <option value="WD28">WD28</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="ta">Instructor:</label>
+                            <input class="form-input" type="text" id="ta" placeholder="Instructor's Name">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="qa">What do you like about your bootcamp?</label><br />
+                            <input type="checkbox" name="class_exp" id="class_exp">
+                            <label for="class_exp">Classroom Experience</label><br />
+                            <input type="checkbox" name="ta_exp" id="ta_exp">
+                            <label for="">Instructor Experience</label><br />
+                            <input type="checkbox" name="class_collab" id="class_collab">
+                            <label for="class_collab">Classmate's Collaboration</label><br />
+                            <input type="checkbox" name="other" id="other">
+                            <label for="other">Other</label>
+                            <input class="form-input" type="text" id="other" placeholder="Other">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="comments">Comments to your Instructor:</label>
+                            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type comment here"></textarea>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <button class="form-button" type="submit">Submit</button>
+                            <button class="form-button" type="reset">Clear</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
