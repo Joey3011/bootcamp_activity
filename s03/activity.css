@@ -1,0 +1,90 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    color: brown;
+}
+/* ID Selector */
+
+#title-1{
+    color: #235879;
+}
+
+/* Class Selector */
+
+.title-2{
+    color: violet;
+    text-align: center;
+}
+
+/* Attribute Selector */
+[type="text"]{
+    background-color: aquamarine;
+}
+
+/* Combinator Selector */
+
+/* Dexcendant selector */
+/* Select/target all elements that matches the specified elements */
+
+/* Synta; First element child element {
+    property: value;  */
+
+    div p{
+        background-color: red;
+    }
+
+    /* Child selector */
+    div > p{
+        background-color: chocolate;
+    }
+
+    /* Adjacent sibling selector (+)
+   - selects or target an element that is direct after the first selector */
+
+   p + p{
+    background-color: maroon;
+   }
+
+   div + p{
+    background-color: #333412;
+   }
+
+   /* General Sibling selector */
+
+   p ~ p {
+    background-color: blue;
+   }
+
+  @media only screen and(min-width: 500px){
+    
+  }
+    /* Pseudo element first line
+    - used to style specific part of an element 
+    Syntax: Selector:: pseudo element {property: value }*/
+
+    /* p::first-line{
+
+    } */
+
+        /* Pseudo element first letter
+    - used to style specific part of an element 
+    Syntax: Selector:: pseudo element {property: value }*/
+
+p::first-letter{
+    color: brown;
+    font-size: 200%;
+ } 
+
+ #pic img{
+    margin-left: 45%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    border: 1px solid royalblue;
+ }
+
+ li{
+    list-style-type: none;
+ }

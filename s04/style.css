@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+}
+
+.first{
+    background-color: lightpink;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.second{
+    background-color: fuchsia;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid black;
+    padding-left: 50px;
+}
