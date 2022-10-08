@@ -1,4 +1,5 @@
 *{
+<<<<<<< HEAD
     font-family: 'Courier New', Courier, monospace; 
     font-size: medium;
  }
@@ -41,3 +42,46 @@
      text-align: center;
  }
  
+=======
+   font-family: 'Courier New', Courier, monospace; 
+   font-size: medium;
+}
+
+#external{
+    color: yellow;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    text-transform: uppercase;
+}
+ol > li{
+    background-color: royalblue;
+}
+.lang-to-learned{
+    font-weight: bold;
+}
+.other-to-learned{
+    font-weight: bold;
+    font-size: large;
+}
+ul > li{
+    list-style-type: none;
+    letter-spacing: 5px;
+}
+ul > p{
+    font-weight: bold; 
+}
+ul > li > img{
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+}
+
+ul ~ p{
+    text-align: center;
+}
+>>>>>>> 14e379d33a7d6796b8e0157a270cd0875bf9a369
