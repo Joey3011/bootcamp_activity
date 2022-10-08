@@ -119,14 +119,14 @@
         <script type="text/javascript">
             var fileInput = document.getElementById('file');
             function handleData() {
-                let  work_site = document.getElementsByName("work_site");
-                let form_data = new FormData(document.querySelector("form"));
-                let fname = document.getElementById('fname').value;
-                let lname = document.getElementById('lname').value;
-                let email = document.getElementById('email').value;
-                let phone = document.getElementById('phone').value;
-                let location = document.getElementById('location').value;
-                let comments = document.getElementById('comments').value;
+                var  work_site = document.getElementsByName("work_site");
+                var form_data = new FormData(document.querySelector("form"));
+                var fname = document.getElementById('fname').value;
+                var lname = document.getElementById('lname').value;
+                var email = document.getElementById('email').value;
+                var phone = document.getElementById('phone').value;
+                var location = document.getElementById('location').value;
+                var comments = document.getElementById('comments').value;
                 if (fname !== "" && lname !== "" && email !== "" && phone !== "" && location!== "" && work_site[0].checked == true || work_site[1].checked == true && form_data.has("service[]") && comments !== "" && fileInput.value !== "") {
                     alert("Thanks for submitting your request..");
                     return true;
