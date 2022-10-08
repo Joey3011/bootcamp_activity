@@ -29,9 +29,6 @@ ol{
     list-style-type: none;
     letter-spacing: 5px;
  }
- ul > p{
-    font-weight: bold; 
- }
  ul > li > img{
     width: 5%;
     height: 5%;
