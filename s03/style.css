@@ -1,9 +1,8 @@
 *{
-<<<<<<< HEAD
     font-family: 'Courier New', Courier, monospace; 
     font-size: medium;
  }
- 
+
  #external{
      color: yellow;
  }
@@ -37,28 +36,7 @@
      height: 5%;
      border-radius: 50%;
  }
- 
- ul ~ p{
-     text-align: center;
- }
- 
-=======
-   font-family: 'Courier New', Courier, monospace; 
-   font-size: medium;
-}
-
-#external{
-    color: yellow;
-}
-
-h1{
-    font-size: 2rem;
-}
-
-h2{
-    text-transform: uppercase;
-}
-ol > li{
+ol{
     background-color: royalblue;
 }
 .lang-to-learned{
@@ -84,4 +62,4 @@ ul > li > img{
 ul ~ p{
     text-align: center;
 }
->>>>>>> 14e379d33a7d6796b8e0157a270cd0875bf9a369
+
