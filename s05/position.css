@@ -1,6 +1,6 @@
 .staticPosition {
     border: 2px solid #7A08FF;
-    /* top:10px; - top, bottom, left and right are not working because this is set as default */
+    /* top, bottom, left and right are not working because this is set as default */
 }
 
 .relativePosition {
