@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Responsiveness</title>
+        <link rel="stylesheet" href="image.css">
+    </head>
+    <body>
+        <h1>Image Responsiveness</h1>
+
+        <img src="hard.png" alt="drinks" id="responsive" />
+        <!-- Making the picture as modal and resposive  -->
+        <div id="myModal" class="modal">
+            <span class="close">&times</span>
+            <img alt="" class="modal-content" id="im01" />
+            <div id="caption">
+
+            </div>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the image and insert it inside modal
+            var img = document.getElementById("responsive");
+            var modalImg = document.getElementById("im01");
+            var captionText = document.getElementById("caption");
+
+            //initialize variable
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            //step 04 exit/close modal using &times(x)
+            var span = document.getElementsByClassName("close")[0]
+
+            span.onclick = function(){
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
