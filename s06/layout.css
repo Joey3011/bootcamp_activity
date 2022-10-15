@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+.left{
+    position: relative;
+    width: 20%;
+    padding: 20px;
+    float: left;
+    background-color: royalblue;
+    text-align: center;
+}
+
+.main{
+    position: fixed;
+    width: 60%;
+    padding: 20px;
+    margin-left: 20%;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.right{
+    position: relative;
+    width: 20%;
+    padding: 20px;
+    float: right;
+    background-color: royalblue;
+    text-align: center;
+}
