@@ -16,7 +16,6 @@ main{
 }
 .parent div:nth-of-type(1){
     position: absolute;
-    left: 0;
     width: 20%;
     margin-left: 4%;
     height: 92%;
