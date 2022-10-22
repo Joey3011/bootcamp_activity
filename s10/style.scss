@@ -13,6 +13,7 @@
   --hoverColor: #5bacdf;
   --backgroundColor: #052639;
   --switchBGforSlider: #f8f8ff;
+  --darkLine: #fff;
 }
 
 /* Light mode */
@@ -22,6 +23,7 @@
   --hoverColor: #5bacdf;
   --backgroundColor: #f8f8ff;
   --switchBGforSlider: #052639;
+  --darkLine: #000;
 }
 
 .toggle-btn i {
@@ -130,8 +132,8 @@ nav{
 .navbar ul li:before {
     content: "";
     position: absolute;
-    background: var(--switchBGforSlider);
-    bottom: 0;
+    background: var(--darkLine);
+    top: 0;
     left: 0;
     width: 0;
     height: 100%;
@@ -146,11 +148,11 @@ nav{
 .navbar ul li:after {
     content: "";
     position: absolute;
-    background: var(--switchBGforSlider);
-    bottom: 0;
+    background: var(--darkLine);
+    top: 0;
     left: 0;
     width: 0;
-    height: 1%;
+    height: 100%;
     z-index: 0;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
