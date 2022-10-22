@@ -1,0 +1,9 @@
+@mixin colors ($colors:royalblue)
+{
+    background-color: $colors;
+    border: 3px;
+}
+
+.table {
+    @include colors;
+}

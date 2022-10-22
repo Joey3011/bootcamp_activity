@@ -1,0 +1,185 @@
+@mixin root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin dark {
+    --mainColor: #64bcf4;
+    --hoverColor: #5bacdf;
+    --backgroundColor: #052639;
+    --switchBGforSlider: #f8f8ff;
+}
+
+@mixin light {
+    --mainColor: #64bcf4;
+    --hoverColor: #5bacdf;
+    --backgroundColor: #f8f8ff;
+    --switchBGforSlider: #052639;
+}
+
+@mixin hide {
+    display: none
+}
+
+@mixin show {
+    display: block;
+}
+
+
+@mixin hover {
+    background: var(--mainColor);
+}
+
+@mixin scrolling {
+    height: 100%;
+    overflow: hidden; 
+}
+
+@mixin position {
+    text-align: center;
+    color: var(--switchBGforSlider);
+}
+
+@mixin labelsize
+{
+    font-size: 13px;
+    display:inline;
+    width:100%;
+}
+
+@mixin form {
+    padding: 15px 20px;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    color: var(--switchBGforSlider);
+}
+
+@mixin bgWrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1.7rem 0 2rem;
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+}
+
+@mixin toggle {
+    display: inline-block;
+    border: none;
+    background: var(--switchBGforSlider);
+    color: var(--backgroundColor);
+    outline: none;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid var(--switchBGforSlider);
+}
+
+@mixin icon {
+    line-height: 39px;
+    font-size: 35px;
+}
+
+@mixin cloneBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation: appear 1s 1 both;
+}
+
+
+
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after{
+    @include root();
+}
+
+.dark{
+    @include dark();
+}
+
+.light{
+    @include light();
+}
+
+
+.stop-scrolling{
+    @include scrolling();
+}
+
+.toggle-btn i {
+    @include icon();
+}
+
+.bg-wrapper{
+    @include bgWrapper();
+}
+
+.copy{
+    @include cloneBG(); 
+}
+
+form{
+    @include form();
+}
+
+.form-title{
+    @include position();
+}
+
+.form-label {
+    @include labelsize();
+}
+
+.toggle-btn{
+    @include toggle;
+}
+
+
+.toggle-btn:hover {
+    @include hover();
+ }
+
+.bg-wrapper.light .toggle-btn i:last-child {
+    display: none;
+ }
+  
+.bg-wrapper.light .toggle-btn i:first-child {
+    display: block;
+}
+  
+.bg-wrapper.dark .toggle-btn i:last-child {
+    display: block;
+}
+  
+.bg-wrapper.dark .toggle-btn i:first-child {
+    display: none;
+}
+
+
+@keyframes appear {
+    0% {
+      clip-path: circle(30% at -25% -25%);
+    }
+    100% {
+      clip-path: circle(150% at 0 0);
+    }
+}
+
+
+

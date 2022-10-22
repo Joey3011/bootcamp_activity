@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!--bootstrap link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../dist/css/activity.css">
+    </head>
+    <body>
+        <main>
+            <!-- bg weapper for light and dark mode -->
+            <div class="bg-wrapper light">
+                <!-- Form -->
+                <div class="container-fluid">
+                    <div class="row justify-content-center mmb-5">
+                        <div class="col-md-10">
+                            <form action="accept.html">
+                                <div class="form-title">
+                                    <h1>
+                                        ABC Company IT Service Request Form
+                                    </h1>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control form-control-sm" name="fname" id="fname" placeholder="Wnter First Name" required>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control form-control-sm" name="fname" id="fname" placeholder="Enter Last Name" required>
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label" for="email">Email:</label>
+                                    <input type="email" class="form-control form-control-sm" name="fname" id="fname" placeholder="Enter E-mail" required>
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label" for="phone">Contact Number:</label>
+                                    <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control form-control-sm" placeholder="123-456-7890" required>
+                                </div>
+                                <div class="mt-2">
+                                    <label class="form-label" for="location">Work location:</label>
+                                </p> 
+                                <!-- Radiobutton  -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="work_site" id="onsite" value="Onsite">
+                                    <label class="form-label" for="onsite">Onsite</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="work_site" id="wfh" value="wfh">
+                                    <label class="form-label" for="wfh">Work From Home</label>
+                                </div>
+                                <div class="mb-3">
+                                    <ul>
+                                        <li>
+                                            For onsite, please state your Workstation No., Department, Floor and Building
+                                        </li>
+                                        <li>
+                                            For work from home, please complete your address and include a landmark nearest to your
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control form-control-sm" name="location" id="location" cols="5" rows="3" placeholder="Type address/location here" required></textarea>
+                                </div>
+                                <div class="form-title mb-2">
+                                    <h3>Service Request Type</h3> 
+                                </div>
+                                    <!-- Checkbox  -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Desktop/Laptop Setup
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Desktop/Laptop Support
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Desktop/Laptop Maintenance
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Software Installation
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Software Support
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Computer Peripheral Setup
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Peripheral Troubleshooting
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="service[]" value="" id="">
+                                    <label class="form-check-label" for="option1">
+                                        Computer Peripheral Maintenance
+                                    </label>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control form-control-sm" name="" id="description" cols="5" rows="3" placeholder="Type detailed request description here" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="myfile">Please select a picture or screenshot that serves as a reference of your request:</label>
+                                    <input type="file" id="file">
+                                </div>
+                                <div class="mb-3">
+                                    <button type="reset" class="btn btn-danger" style=>Cancel</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button class="toggle-btn">
+                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </main>
+        <!--bootstrap link -->
+        <script src="../js/activity.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
