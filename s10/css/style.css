@@ -80,7 +80,7 @@
 
 section,
 .carousel {
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 section h1 {
@@ -212,11 +212,11 @@ footer i {
   padding: 8px;
 }
 
-@media only screen and (min-width: 280px) and (max-width: 768px) {
+@media only screen and (min-width: 280px) and (max-width: 580px) {
   .carousel-control-prev {
-    margin: 35px 16px 0;
+    margin: 30px 5px 0;
   }
   .carousel-control-next {
-    margin: 35px 16px 0;
+    margin: 30px 5px 0;
   }
 }/*# sourceMappingURL=style.css.map */
