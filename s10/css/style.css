@@ -22,11 +22,6 @@
   --switchBGforSlider: #052639;
 }
 
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-}
-
 .toggle-btn i {
   line-height: 39px;
   font-size: 35px;
@@ -89,12 +84,16 @@ section,
 }
 
 section h1 {
+  background-color: var(--backgroundColor);
+  color: var(--switchBGforSlider);
+}
+
+.navbar-toggler span i {
   color: var(--switchBGforSlider);
 }
 
 nav {
   background-color: var(--backgroundColor);
-  position: fixed;
   border-bottom: 1px solid var(--switchBGforSlider);
 }
 
@@ -186,6 +185,8 @@ footer p {
 
 footer .btn {
   margin: 2px 5px;
+  background-color: var(--switchBGforSlider);
+  color: var(--backgroundColor);
 }
 
 footer .fa {

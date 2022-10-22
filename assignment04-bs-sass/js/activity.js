@@ -28,14 +28,14 @@ clone.classList.add("copy");
 main.appendChild(clone);
 document.body.classList.add("stop-scrolling");
 
-
-
-document.body.classList.remove("stop-scrolling");
-bg_wrapper.remove();
-clone.classList.remove("copy");
-// Reset Variables
-declare();
-events();
+clone.addEventListener("animationend", () => {
+  document.body.classList.remove("stop-scrolling");
+  bg_wrapper.remove();
+  clone.classList.remove("copy");
+  // Reset Variables
+  declare();
+  events();
+});
 }
 
 function checkStatus(){
