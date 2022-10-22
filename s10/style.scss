@@ -180,8 +180,14 @@ footer h4{
 
 footer p{
     font-size: 15px;
-    color: var(--switchBGforSlider);
+    background-color: var(--switchBGforSlider);
     font-weight: bold;
+ }
+
+ footer .btn:hover{
+  color: var(--backgroundColor);
+  background-color: var(--switchBGforSlider);
+  transform: scale(1.1);
  }
 
 footer .btn{
