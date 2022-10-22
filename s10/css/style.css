@@ -210,4 +210,13 @@ footer i {
   border: 1px solid var(--switchBGforSlider);
   text-align: center;
   padding: 8px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 768px) {
+  .carousel-control-prev {
+    margin: 35px 16px 0;
+  }
+  .carousel-control-next {
+    margin: 35px 16px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

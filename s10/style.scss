@@ -213,4 +213,11 @@ footer i{
     padding: 8px;
  }
 
-
+ @media only screen and (min-width: 280px) and (max-width: 768px){
+  .carousel-control-prev{
+      margin: 35px 16px 0;
+    }
+    .carousel-control-next{
+      margin: 35px 16px 0;
+    }
+ }
