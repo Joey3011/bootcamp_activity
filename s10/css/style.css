@@ -80,7 +80,7 @@
 
 section,
 .carousel {
-  padding: 0 12px;
+  padding: 0 15px;
 }
 
 section h1 {
@@ -219,8 +219,9 @@ footer i {
   .carousel-control-next {
     margin: 35px 5px 0;
   }
-  section,
-.carousel {
-    padding: 0 8px;
+
+  .carousel,
+  section {
+    padding: 0 10px;
   }
 }/*# sourceMappingURL=style.css.map */
