@@ -214,9 +214,13 @@ footer i {
 
 @media only screen and (min-width: 280px) and (max-width: 580px) {
   .carousel-control-prev {
-    margin: 30px 5px 0;
+    margin: 35px 5px 0;
   }
   .carousel-control-next {
-    margin: 30px 5px 0;
+    margin: 35px 5px 0;
+  }
+  section,
+.carousel {
+    padding: 0 8px;
   }
 }/*# sourceMappingURL=style.css.map */
