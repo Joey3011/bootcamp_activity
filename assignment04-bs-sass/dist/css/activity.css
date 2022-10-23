@@ -81,6 +81,11 @@ form {
   border: 1px solid var(--switchBGforSlider);
 }
 
+h3 {
+  text-align: center;
+  color: var(--switchBGforSlider);
+}
+
 .toggle-btn:hover {
   background: var(--mainColor);
 }

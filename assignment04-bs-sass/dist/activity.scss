@@ -150,6 +150,9 @@ form{
     @include toggle;
 }
 
+h3{
+    @include position();
+}
 
 .toggle-btn:hover {
     @include hover();
