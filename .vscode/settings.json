@@ -1,0 +1,45 @@
+{
+    "workbench.colorTheme": "Night Owl",
+    "editor.fontSize": 18,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "diffEditor.wordWrap": "on",
+    "editor.linkedEditing": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "vscode-icons",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "window.zoomLevel": -2,
+    "git.enableSmartCommit": true,
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.formats": [
+        
+
+
+        
+        {
+         "format": "expanded",
+         "extensionName": ".css",
+         "savePath": "/css"
+        },
+
+        {
+            "format": "compressed",
+            "extensionName":".min.css",
+            "savePath": "/css"
+        }
+    ],
+
+    "liveSassCompile.settings.compileOnWatch": false,
+    "liveSassCompile.settings.watchOnLaunch": false,
+    "liveSassCompile.settings.rootIsWorkspace": false,
+    "liveSassCompile.settings.generateMap": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "liveSassCompile.settings.includeItems": [
+    
+    ],
+    "liveServer.settings.port": 5501
+}
