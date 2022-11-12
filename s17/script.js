@@ -225,13 +225,10 @@ let bigData = [
     }
 ];
 
-let result = bigData.forEach(
-    function(element)
-    {
-        console.log(element);
-        return element
-    }
-);
+let result = bigData.forEach((element) => {
+    console.log(element);
+    return element
+});
 console.log(result); //undefined return
 
 //Q: How to create a copy of an array from the original array?
