@@ -199,3 +199,59 @@ console.log(index);
 
 let lastIndex = countries.lastIndexOf("PH");
 console.log(lastIndex);
+
+//Iterators - defines a sequence and potentially a return value upon its termination.
+//forEach()
+
+/*
+    Syntax:
+    forEach(function(){
+
+    });
+
+*/
+
+let bigData = [
+    {
+        fn:"Joshua", ln:"Garcia"
+    },
+
+    {
+        fn:"Dingdong", ln:"Dantes"
+    },
+
+    {
+        fn:"Christopher", ln:"De Leon"
+    }
+];
+
+let result = bigData.forEach(
+    function(element)
+    {
+        console.log(element);
+        return element
+    }
+);
+console.log(result); //undefined return
+
+//Q: How to create a copy of an array from the original array?
+
+let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+
+//Step 1: map() - iterates each element in an array and returns a new array with same elements (or different values depending on the result of the function operation)
+//does not modify the original array
+
+let mapNewDays = days.map(
+    function (day){
+        return day;
+    }
+);
+console.log(mapNewDays);
+
+//Step 2: Create a copy of a new array using forEach()
+let newDays = [];
+console.log(newDays);
+days.forEach(function (day){
+    newDays.push(day);
+});
+console.log(newDays);
