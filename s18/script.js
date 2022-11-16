@@ -1,0 +1,37 @@
+// let pets = [
+//     "dogs",
+//     "cats",
+//     "birds",
+//     "fishes"
+// ]
+
+// let findPet = (pets.filter(petsToFInd => {
+//   let found =  petsToFInd.includes("dogs")
+//       if(!found) return false
+//       console.log(found)
+//        return true
+  
+// }))
+   
+// console.log(findPet)
+        
+let s = "";
+let c3 = 0, c5 = 0;
+for (var i = 1; i <= 15; i++) {
+    c3++;
+    c5++;
+    if (c3 == 3) {
+        s += "fizz";
+        c3 = 0;
+    }
+    if (c5 == 5) {
+        s += "buzz";
+        c5 = 0;
+    }
+    if (s.length == 0)
+        console.log(i);
+    else
+        console.log(s);
+    s = "";
+}
+
