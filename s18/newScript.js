@@ -1,6 +1,6 @@
 const stdIDContainer = document.getElementById('stdID');
     const showGrade = (arr) =>{
-        const output = [];
+        const result = [];
         const header = []
         header.push(`
         <thead>
@@ -14,11 +14,11 @@ const stdIDContainer = document.getElementById('stdID');
             </tr>
         </thead>
         `)
-        arr.forEach((grade) => {
+        arr.filter((grade) => {
             let newGrade = {
                 Average: (grade.Q1 + grade.Q2 + grade.Q3 + grade.Q4) / 4
               }
-            output.push(
+              result.push(
                 `<tbody>
                     <tr>
                         <td class="table-light col-md-2">${grade.studentId}</td>
@@ -30,7 +30,7 @@ const stdIDContainer = document.getElementById('stdID');
                     </tr>
                 </tbody>`
             )
-            stdIDContainer.innerHTML = header.join('') +  output.join('')
+            stdIDContainer.innerHTML = header.join('') +  result.join('')
         })
        return 
     }
