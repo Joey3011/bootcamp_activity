@@ -16,7 +16,7 @@ const stdIDContainer = document.getElementById('stdID');
         `)
         arr.filter((grade) => {
             let newGrade = {
-                Average: (grade.Q1 + grade.Q2 + grade.Q3 + grade.Q4) / 4
+                Average: (grade.Q1 + grade.Q2 + grade.Q3 + grade.Q4) / (arr.length - 1)
               }
               result.push(
                 `<tbody>

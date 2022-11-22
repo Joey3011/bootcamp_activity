@@ -100,14 +100,15 @@ pushButton.addEventListener("click", () => {
     if(inputValue == ""){
         alert("Pls. enter a value")
       }else{
-         arr.push(inputValue)
-       for(let i = stack_item.length-1; i >= 0; i--){
-            if(stack_item[i].innerHTML == ""){
-                stack_item[i].innerHTML = arr
-                stackItem.push(stack_item[i].innerHTML.toString())
-                break;
-            }
-       }
+        arr.push(inputValue)
+        for(let i = stack_item.length-1; i >= 0; i--){
+                if(stack_item[i].innerHTML == ""){
+                    stack_item[i].innerHTML = arr
+                    stackItem.push(stack_item[i].innerHTML.toString())
+                    alert(`'${arr}' is the item that was added to stack using 'push()'`)
+                    break;
+                }
+        }
        console.log(stackItem)
     } 
 })
@@ -119,7 +120,7 @@ emptyButton.addEventListener('click', () => {
         const response = confirm(`Are you sure you want to remove the item at the last position?`)
         if(response){
             let remove = stackItem.pop()
-            alert(`${remove} is the item at the last position and was remove`)
+            alert(`'${remove}' is the item at the last position and is now being remove using 'pop()'`)
             for(let i = 0; i < stack_item.length; i += 1){
                 if(stack_item[i].innerHTML == remove){
                     stack_item[i].innerHTML = ''
@@ -134,7 +135,7 @@ emptyButton.addEventListener('click', () => {
 peekButton.addEventListener('click', () => {
     let peeked = stackItem.peek()
     if(peeked){
-        alert(`Item ${peeked} was the last element of an array that is recently added`)
+        alert(`Item '${peeked}' was the last element of an array that is recently added and was returned using 'peek()'`)
     }
 })
 
@@ -157,7 +158,7 @@ const studentGrades = [
     },
     {
         studentId: 2,
-        Q1: 99.2,
+        Q1: 69.2,
         Q2: 71.8,
         Q3: 76.5,
         Q4: 81.9
@@ -182,7 +183,7 @@ const studentGrades = [
         Q2: 73.8,
         Q3: 80.1,
         Q4: 81.8
-    }
+    },
 ];
 
 // ASSIGNMENT: Compute the student average by accessing the declared ojects
@@ -190,42 +191,177 @@ const studentGrades = [
 // CLUE: We can use to compute the average manually or using for loop
         
 
-const averageGrade = ((arrOfGrade) => {
-    const newArray = []
-        arrOfGrade.map((grade) => {
-            let newGrade = {
-                ID: grade.studentId,
-                Q1: grade.Q1,
-                Q2: grade.Q2,
-                Q3: grade.Q3,
-                Q4: grade.Q4,
-                "Student's Average Grade" : (grade.Q1 + grade.Q2 + grade.Q3 + grade.Q4) / (arrOfGrade.length - 1)
-            }
-            newArray.push(newGrade)
-        })
-    return newArray
-})
-let result = averageGrade(studentGrades)
-console.log(result)
+// const averageGrade = ((arrOfGrade) => {
+//     const newArray = []
+//         arrOfGrade.forEach((grade) => {
+//             let newGrade = {
+//                 ID: grade.studentId,
+//                 Q1: grade.Q1,
+//                 Q2: grade.Q2,
+//                 Q3: grade.Q3,
+//                 Q4: grade.Q4,
+//                 "Student's Average Grade" : (grade.Q1 + grade.Q2 + grade.Q3 + grade.Q4) / (arrOfGrade.length - 1)
+//             }
+//             newArray.push(newGrade)
+//         })
+//     return newArray
+// })
+// let result = averageGrade(studentGrades)
+// console.log(result)
+
+
+//Object Constructor
+// let hero = {
+//     name: "Angela",
+//     level: 1,
+//     role: "support",
+//     health: 100,
+//     attack: 50,
+//     mana: 100,
+
+//     tackle: function() {
+//         console.log(`This hero tackled hero`);
+//         console.log(`Target hero's health is now reduced to heroHealth`);
+//     },
+
+//     faint: function(){
+//         console.log(`Hero fainted`);
+//     }
+// }
+
+// console.log(hero);
+
+// //Q: What if we want to create a multiple objects with the same properties? Would you prefer creating 1 object each? No, it will take too long
+
+// //To solve this dilemma, Object Constructor will be a good use.
+
+// //Object Constructor - serves as a blueprint of our objects.
+// // Objects created using "this" constructor will inherit what are the function properties and methods set by this function.
+
+// //Q: What are the steps in creating an Object Constructor
+
+// //Step 1: Create a template or blueprint
+// function Pokemon (name, lvl, hp){
+//     this.name = name;
+//     this.level = lvl;
+//     this.health = hp * 2;
+//     this.attack = lvl;
+
+//     this.tackle = function (target){
+//         console.log(target);
+
+//         console.log(`This ${this.name} tackled ${target.name}`);
+
+//         console.log(`${target.name}'s health is now reduced to ${target.health - this.attack}`);
+//     };
+
+//     this.faint = function(){
+//         console.log(`${this.name} fainted!`);
+//     }
+// }
+
+// //Step 2: Initialize an Object with arguments
+// let pikachu = new Pokemon ("Pikachu", 5, 50);
+// let charizzard = new Pokemon ("Charizzard", 8, 40)
+
+// console.log(pikachu);
+// console.log(charizzard);
+
+// //Step 3: Execute the property
+// //For this example we execute the tackle property of Pikachu object
+// console.log(pikachu.tackle(charizzard));
+// console.log(pikachu.tackle(charizzard));
+// console.log(pikachu.tackle(charizzard));
+
+// function profile (firstName, lastName, nickName, job, hobby){
+//     this.fullName = firstName + " " + lastName;
+//     this.nickName = nickName;
+//     this.job = job;
+//     this.hobby = hobby;
+
+//     this.checkInfo = function (info){
+//         console.log(`${this.fullName}, also known by others by the name of ${info.nickName}, job is ${info.job} and likes ${info.hobby}`);
+//     };
+// }
+
+// let viewInfo = new profile ("James", "Bond", "James", "Secret agent", "Eating");
+// console.log(viewInfo)
+// console.log(viewInfo.checkInfo(viewInfo))
 
 
 
+// const car = [
+//     {
+//         brand: "Kotseng Bukot",
+//         model:  "Nayntin Kopung-kopung",
+//         price:  10000
+//     },
+//     {
+//         brand: "Nissan",
+//         model:  "Fortuner",
+//         price:  10000
+//     }
+// ]
 
 
+// console.log(car.brand == "nissan")
 
 
+let users = [
+	{
+		username: "kimdhyn",
+		email: "dahyun@gmail.com",
+		password: "dahyunTwiceu"
+	},
+	{
+		username: "jenKimBP",
+		email: "jennieSolo@gmail.com",
+		password: "dududuJennie",
+	},
+	{
+		username: "lisaBP",
+		email: "lisaManoban@gmail.com",
+		password: "lisaIsHere"
+	}
+];
 
 
+// let userName = prompt("Please enter username or email")
+// let password = prompt("Please enter password")
 
-  
+// const log = (user, pwd) =>{
+//     let loggin = users.find((checkLog) =>{
+//         if(user != checkLog.username || pwd != checkLog.password){
+//             return false
+//        }else{
+//             return true
+//         }
+//     })
+//     if(!loggin) return alert(`Login failed. Wrong credentials`)
 
+//     alert(`Thank you for logging in`) 
 
+//     return loggin
+// }
 
+// console.log(log(userName, password))
 
+let userName = prompt("Please enter username or email")
+let password = prompt("Please enter password")
 
+const log = (userOrEmail, pwd) =>{
+    let loggin = users.find((checkLog) =>{
+        if(userOrEmail !== checkLog.username && userOrEmail !== checkLog.email || pwd !== checkLog.password){
+            return false
+       }else{
+            return true
+        }
+    })
+    if(!loggin) return alert(`Login failed. Wrong credentials`)
 
+    alert(`Thank you for logging in`) 
+    
+    return loggin
+}
 
-
-
-
-
+console.log(log(userName, password))
