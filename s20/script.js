@@ -13,7 +13,7 @@ const addStudent = (arr, sName, studSec) =>{
     if(sName != "" && studSec != ""){
         let found = arr.find((findName) => findName.studentName.toLowerCase() === sName.toLowerCase())
         if(found){
-            console.log(`${sName} is already listed in section ${studSec}`)
+            console.log(`${sName} is already listed`)
         }else{
             students.push({studentName: sName, Section: studSec})
             console.log(`${sName} was added to student's list`)
